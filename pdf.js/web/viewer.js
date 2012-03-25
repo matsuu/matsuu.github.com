@@ -657,6 +657,8 @@ var PageView = function pageView(container, content, id, pageWidth, pageHeight,
 
   this.update = function pageViewUpdate(scale) {
     this.scale = scale || this.scale;
+    div.style.width = (this.width * this.scale) + 'px';
+    div.style.height = (this.height * this.scale) + 'px';
 
     while (div.hasChildNodes())
       div.removeChild(div.lastChild);
